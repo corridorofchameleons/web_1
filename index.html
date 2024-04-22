@@ -41,7 +41,7 @@
             height: -webkit-fill-available;
             max-height: 100vh;
             overflow-x: auto;
-            overflow-y: hidden;
+            overflow-y: auto;
         }
 
         .b-example-divider {
@@ -267,8 +267,8 @@
         </header>
 
         <main class="row">
-            <div class="row text-center">
-                <div class="col-4">
+            <div class="row">
+                <div class="col-4 text-center">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">Товар 1</h4>
@@ -281,11 +281,101 @@
                                 Email support,
                                 Help center access
                             </p>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+                            <button type="button" class="w-100 btn btn-lg btn-primary btn btn-success">Купить</button>
                         </div>
                     </div>
                 </div>
+                <form class="col-6 text-left">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Имя</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
             </div>
+            <div class="row mt-3">
+                <p class="d-flex justify-content-center gap-1">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
+                        Как купить?
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                        Как доставить?
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                        Какая гарантия?
+                    </button>
+                </p>
+                <div class="collapse" id="faq-1">
+                    <div class="card card-body">
+                        Доверьтесь интуиции
+                    </div>
+                </div>
+                <div class="collapse" id="faq-2">
+                    <div class="card card-body">
+                        Мы доставим за вас
+                    </div>
+                </div>
+                <div class="collapse" id="faq-3">
+                    <div class="card card-body">
+                        Какие в наше время гарантии...
+                    </div>
+                </div>
+            </div>
+            <table class="table m-1">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Товар</th>
+                    <th scope="col">Цена</th>
+                    <th scope="col">Количество</th>
+                    <th scope="col">Итоговая сумма без джаваскрипта</th>
+                    <th scope="col">Статус</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Товар 1</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>20</td>
+                    <td class="alert alert-danger" role="alert">Отменен</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Товар 2</td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>30</td>
+                    <td class="alert alert-success" role="alert">Обработан</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Товар 4</td>
+                    <td>100</td>
+                    <td>2</td>
+                    <td>200</td>
+                    <td class="alert alert-primary">Новый</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Товар 3</td>
+                    <td>20</td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td class="alert alert-warning" role="alert">Обработка</td>
+                </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; font-style: italic">Конец страницы</p>
         </main>
 
     </div>
